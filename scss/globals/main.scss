@@ -1,0 +1,265 @@
+// A Modern CSS Reset "https://piccalil.li/blog/a-modern-css-reset/"
+@use './boilerplate' as *;
+
+// typography
+@use './typography' as *;
+
+// colors
+@use '../colors/Allcolors' as *;
+
+// mixins
+@use "../helpers/mixin/mixins" as*;
+
+body {
+  background-size: cover;
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+header {
+  padding: 40px;
+
+  .h {
+    display: none;
+    cursor: pointer;
+  }
+  .humborger {
+    width: 24px !important;
+    height: 21px !important;
+  }
+  .set {
+    width: 19px !important;
+    height: 19px !important;
+    cursor: pointer;
+  }
+
+  .contaner {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0px auto;
+    height: 90px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    
+    .ul-con {
+      right: -30px;
+      position: absolute;
+      display: flex;
+      width: 830px;
+      height: 96px;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(40.7742px);
+      border-radius: 3px;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        width: 700px;
+        justify-content: space-evenly;
+        height: 100%;
+      }
+
+      li {
+        height: 100%;
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          color: white;
+          font-size: 16px;
+          letter-spacing: 2.7px;
+          position: relative;
+          
+
+          &:not(.active):before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0px;
+            background: rgba(255, 255, 255, 0.336);
+            bottom: 0px;
+            transition: 0s !important;
+          }
+
+          &:hover::before {
+            height: 3px;
+          }
+        }
+        span {
+          margin-right: 5px;
+        }
+      }
+
+      &::before {
+        content: "";
+        width: 40%;
+        height: 1px;
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+        left: -300px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+
+.active {
+  border-bottom: solid 3px white;
+}
+
+
+main .contaner {
+  margin: 0 auto;
+  max-width: 1050px;
+  padding: 0px 24px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+
+@include breakPoint(mobile) {
+
+  header {
+    .disk-ul {
+      display: none !important;
+    }
+
+    .ul-con {
+      right: 0px !important;
+      position: fixed !important;
+      height: 100% !important;
+      align-items: unset !important;
+      top: 0px;
+      z-index: 1000;
+      padding-top: 60px;
+      flex-direction: column;
+
+      ul {
+        flex-direction: column !important;
+        height: 40% !important;
+        width: 100% !important;
+      }
+
+      &::before {
+        display: none !important;
+      }
+    }
+
+    padding: 24px;
+
+    .h {
+      display: inline !important;
+    }
+    .close {
+      display: none !important;
+    }
+    .set {
+      align-self: flex-end;
+    }
+
+    .contaner {
+
+      a {
+
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+
+    }
+  }
+
+  main {
+    .contaner {
+      flex-direction: column !important;
+    }
+  }
+
+}
+@include breakPoint(small) {
+
+header {
+
+    padding: 24px;
+
+    .contaner {
+      
+
+      ul {
+        span {
+          display: none;
+        }
+      }
+
+      a {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .ul-con {
+        right: -350px;
+
+
+        &::before {
+          display: none;
+        }
+
+        ul {
+          width: 500px;
+        }
+      }
+    }
+  }
+
+  main {
+    .contaner {
+      flex-direction: column !important;
+        .ul-con::before {
+            display: none !important;
+          }
+    }
+  }
+}
+
+@include breakPoint(medium) {
+  header {
+      .contaner {
+        .ul-con::before {
+          display: none !important;
+        }
+      }
+    }
+}
+
+
+.show {
+  padding: 30px;
+  width: 70% !important;
+}
+
+.hidde {
+  padding: 0px;
+  width: 0% !important;
+}

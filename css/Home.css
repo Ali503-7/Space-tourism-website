@@ -1,0 +1,90 @@
+body {
+  background-image: url("../../assets/home/background-home-desktop.jpg");
+}
+
+main {
+  padding-bottom: max(8rem, 12vh);
+}
+main .contaner .space {
+  color: #FFFFFF;
+  max-width: 445px;
+}
+main .contaner .space h1 {
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 150px;
+  line-height: 172px;
+}
+main .contaner .space p,
+main .contaner .space .h5 {
+  color: #D0D6F9;
+}
+main .contaner .explore {
+  width: 274px;
+  height: 274px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  text-transform: uppercase;
+  color: #0B0D17;
+}
+main .contaner .explore::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #FFFFFF;
+  opacity: 0;
+  border-radius: 50%;
+  transform: opacity 500ms linear, transform 750ms ease-in-out;
+}
+main .contaner .explore:hover::before {
+  opacity: 0.1;
+  transform: scale(1.5);
+}
+
+@media (max-width: 767px) {
+  body {
+    background-image: url("../../assets/home/background-home-mobile.jpg");
+  }
+  .contaner .space {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .contaner .space .h5 {
+    font-size: 18px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+  .contaner .space h1 {
+    font-size: 80px !important;
+  }
+  .contaner .space p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  main .contaner {
+    text-align: center !important;
+  }
+  main .contaner .h5 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  main .contaner p {
+    font-size: 16px;
+  }
+  main .contaner .space {
+    margin-bottom: 155px;
+  }
+}/*# sourceMappingURL=Home.css.map */
