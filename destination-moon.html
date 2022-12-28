@@ -11,13 +11,66 @@
   
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body name="destination">
-  <!-- Header is injected from header.js file -->
+<body>
+  <!-- Header in injected from header.js file -->
 
-  <!-- Start Main -->
-  <!-- Start Main -->
+  <!-- start Main -->
 
-  <script src="./dist/header.js"></script>
-  <script src="./dist/main.js"></script>
+  <main>
+
+    <div class="main-con">
+
+      <p class="h5"><span class="numbering B-700">01</span>Pick your destination</p>
+
+      <div class="contaner">
+
+        <img src="./assets/destination/image-moon.png" alt="" class="P_img">
+
+        <div class="planets">
+
+          <div class="top F-16 BarC letter-2">
+            <ul>
+              <li name="moon" status="active">MOON</li>
+              <li name="mars" status="">MARS</li>
+              <li name="europa" status="">EUROPA</li>
+              <li name="titan" status="">TITAN</li>
+            </ul>
+          </div>
+
+            <div class="mid">
+              <h2>moon</h2>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas molestiae unde similique officia dolorem, quod, numquam esse ad placeat debitis neque sint tenetur laudantium saepe impedit tempore possimus est illo?</p>
+            </div>
+
+            <div class="bottom">
+              <div class="left">
+
+                <span>AVG. DISTANCE</span>
+                <p><span class="KM"></span> KM</p>
+
+              </div>
+
+              <div class="right">
+
+                <span>Est. travel time</span>
+                <p><span class="Days"></span> days</p>
+
+              </div>
+            </div>
+          
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </main>
+
+  <!-- End Main -->
+  
+    <script src="./dist/header.js"></script>
+    <script src="./dist/main.js"></script>
+    <script src="./dist/planets.js"></script>
 </body>
 </html>
