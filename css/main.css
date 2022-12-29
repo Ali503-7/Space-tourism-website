@@ -215,7 +215,7 @@ header .contaner img {
   height: 48px;
 }
 header .contaner .ul-con {
-  right: -30px;
+  right: 0px;
   position: absolute;
   display: flex;
   width: 830px;
@@ -339,7 +339,10 @@ main .contaner {
     height: 40px;
   }
   header .contaner .ul-con {
-    right: -350px;
+    right: 0px;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
   header .contaner .ul-con::before {
     display: none;
@@ -353,9 +356,20 @@ main .contaner {
   main .contaner .ul-con::before {
     display: none !important;
   }
+  .hidde {
+    display: none !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   header .contaner .ul-con::before {
+    display: none !important;
+  }
+  header .hidde {
+    display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidde {
     display: none !important;
   }
 }
