@@ -1,12 +1,22 @@
 @use '../colors/Allcolors' as*;
 
+@use "../helpers/mixin/mixins" as*;
+
 body {
   background-image: url('../../assets/destination/background-destination-desktop.jpg');
 }
 
+main {
+  padding-bottom: max(1em, 10vh) !important;
+
+  .contaner {
+    max-width: 1150px !important;
+  }
+}
+
 .main-con {
     margin: 0 auto;
-    max-width: 1050px;
+    max-width: 1150px;
     padding: 0px 24px;
     
   p {
@@ -27,17 +37,18 @@ body {
 .contaner {
   .P_img {
     width: 445px;
-    margin-right: 155px;
+    animation: planet 1s infinite ease-in-out alternate;
   }
 
   .planets {
     display: flex;
     flex-direction: column;
+    max-width: 445px;
     .top {
       ul {
         color: $pragraph;
         display: flex;
-        width: 80%;
+        width: 60%;
         justify-content: space-between;
 
         li {
@@ -46,6 +57,7 @@ body {
           width: fit-content;
 
           &[status='active'] {
+            transition: 0s !important;
             border-bottom: solid 3px white;
           }
         }
@@ -53,6 +65,7 @@ body {
     }
 
     .mid {
+      position: relative;
       h2 {
         color: white;
         text-transform: uppercase;
@@ -60,9 +73,107 @@ body {
 
       p {
         color: $pragraph;
-        font-size: 18px;
-        line-height: 32px;
+        line-height: 178%;
+        font-weight: 400;
       }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0px;
+        top: 90.93%;
+        background: #383B4B;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: row;
+
+      p {
+        margin-bottom: 0px;
+      }
+
+      .left {
+        margin-right: 80px;
+      }
+    }
+  }
+}
+
+@keyframes planet {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@include breakPoint(small) {
+  .planets {
+    max-width: 85% !important;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .top {
+    width: 80%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@include breakPoint(mobile) {
+  .main-con p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    .numbering {
+      font-size: 16px !important;
+    }
+  }
+  .contaner {
+    padding: 0px !important;
+  }
+  .mid {
+    h2 {
+      font-size: 56px !important;
+    }
+  }
+
+  .planets {
+      max-width: 100% !important;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+  .contaner .planets .top ul {
+    width: 100%;
+  }
+
+  .bottom {
+    flex-direction: column !important;
+
+    .left {
+      margin: 0px !important;
+      margin-bottom: 20px !important;
+    }
+
+    p {
+      font-size: 28px;
     }
   }
 }

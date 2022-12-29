@@ -2,9 +2,6 @@ body {
   background-image: url("../../assets/home/background-home-desktop.jpg");
 }
 
-main {
-  padding-bottom: max(8rem, 12vh);
-}
 main .contaner .space {
   color: #FFFFFF;
   max-width: 445px;

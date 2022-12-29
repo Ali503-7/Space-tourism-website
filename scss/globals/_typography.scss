@@ -1,3 +1,7 @@
+// colors
+@use '../colors/Allcolors' as *;
+
+// All My fonts
 @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
 
 .B-400 {
@@ -44,6 +48,8 @@ h4 {
 .Sub-h2 {
   font-size: 14px;
   letter-spacing: 2.35px;
+  color: $pragraph;
+  text-transform: uppercase;
 }
 .Nav{
   font-size: 16px;

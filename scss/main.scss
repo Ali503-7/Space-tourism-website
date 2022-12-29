@@ -1,14 +1,14 @@
 // A Modern CSS Reset "https://piccalil.li/blog/a-modern-css-reset/"
-@use './boilerplate' as *;
+@use './globals/boilerplate' as *;
 
 // typography
-@use './typography' as *;
+@use './globals/typography' as *;
 
 // colors
-@use '../colors/Allcolors' as *;
+@use './colors/Allcolors' as *;
 
 // mixins
-@use "../helpers/mixin/mixins" as*;
+@use "./helpers/mixin/mixins" as*;
 
 body {
   background-size: cover;
@@ -16,6 +16,10 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+
+  main {
+    padding-bottom: max(8rem, 12vh);
+  }
 }
 
 header {
