@@ -113,6 +113,10 @@ main {
 }
 
 @include breakPoint(small) {
+  body {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+
   .planets {
     max-width: 85% !important;
     text-align: center;
@@ -128,6 +132,10 @@ main {
 }
 
 @include breakPoint(mobile) {
+  body {
+      background-image: url(../assets/destination/background-destination-mobile.jpg);
+    }
+
   .main-con p {
     display: flex;
     justify-content: center;

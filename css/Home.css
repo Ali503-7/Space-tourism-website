@@ -47,7 +47,7 @@ main .contaner .explore:hover::before {
 
 @media (max-width: 767px) {
   body {
-    background-image: url("../../assets/home/background-home-mobile.jpg");
+    background-image: url("../assets/home/background-home-mobile.jpg");
   }
   .contaner .space {
     margin-bottom: 80px;

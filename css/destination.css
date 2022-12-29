@@ -103,6 +103,9 @@ main .contaner {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
   .planets {
     max-width: 85% !important;
     text-align: center;
@@ -117,6 +120,9 @@ main .contaner {
   }
 }
 @media (max-width: 767px) {
+  body {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+  }
   .main-con p {
     display: flex;
     justify-content: center;
