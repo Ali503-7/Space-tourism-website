@@ -27,7 +27,7 @@ P_ul.forEach((li: {
 
 
 function planets(_theplanet: string): void {
-  fetch(`../data.json`).then((data) => {
+  fetch(`data.json`).then((data) => {
     return data.json()
   })
     .then((planets) => {

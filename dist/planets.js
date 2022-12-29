@@ -19,7 +19,7 @@ P_ul.forEach((li) => {
     };
 });
 function planets(_theplanet) {
-    fetch(`../data.json`).then((data) => {
+    fetch(`data.json`).then((data) => {
         return data.json();
     })
         .then((planets) => {
