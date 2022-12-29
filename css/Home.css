@@ -68,7 +68,7 @@ main .contaner .explore:hover::before {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   body {
-    background-image: url("../../assets/home/background-home-tablet.jpg");
+    background-image: url("../assets/home/background-home-tablet.jpg");
   }
   main .contaner {
     text-align: center !important;
