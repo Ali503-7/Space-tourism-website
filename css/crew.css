@@ -22,7 +22,6 @@ body main {
   justify-content: center;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 .main-con .crow-img img {
   max-width: 90%;
