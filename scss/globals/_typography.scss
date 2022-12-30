@@ -31,15 +31,19 @@ h2 {
 h3 {
   font-size: 56px;
   font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 h4 {
   font-size: 32px;
   font-family: 'Bellefair', serif;
+  text-transform: uppercase;
 }
 .h5 {
   font-size: 28px;
   letter-spacing: 4.75px;
   font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
 }
 .Sub-h1 {
   font-family: 'Bellefair', serif;
@@ -74,4 +78,20 @@ h4 {
   font-size: 16px;
   line-height: 19.2px;
   letter-spacing: 2.7px;
+}
+
+.crow-h {
+  font-family: 'Bellefair';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  /* identical to box height */
+
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }

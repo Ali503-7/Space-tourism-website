@@ -1,0 +1,149 @@
+// All the colors
+@use '../colors/Allcolors' as *;
+
+// mixins 
+@use '../helpers/mixin/mixins' as *;
+
+body {
+  background-image: url('../assets/crew/background-crew-desktop.jpg');
+
+}
+
+.main-con .h5 {
+  padding: 0px 25px;
+  margin: 15px;
+}
+
+body main {
+  padding-bottom: max(0rem, 0vh);
+}
+
+.main-con {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+
+  .crow-img {
+    align-self: flex-end;
+    margin-left: 20px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    img {
+      max-width: 90%;
+    }
+  }
+
+  .crow {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    .crow-text {
+      max-width: 700px;
+      margin-top: 150px;
+
+      p {
+        color: $pragraph;
+        line-height: 178%;
+        display: inline;
+      }
+    }
+
+
+    .dots {
+      .dote {
+        width: 15px;
+        height: 15px;
+        background: #FFFFFF;
+        mix-blend-mode: normal;
+        opacity: 0.17;
+        display: block;
+        border-radius: 50%;
+        &[status='active'] {
+          opacity: 1;
+        }
+
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+          margin-right: 15px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+@include breakPoint(small) {
+  body {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+
+  .crow {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: fit-content !important;
+  }
+}
+
+@include breakPoint(mobile) {
+  body {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+
+  .main-con .contaner {
+    flex-direction: column-reverse !important;
+  }
+
+  .crow {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: fit-content !important;
+    padding: 0px 24px;
+  }
+
+  .crow-img {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+    .beffor {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      &::before {
+        content: "";
+        width: 90%;
+        height: 1px;
+        background-color: #D0D6F930;
+        position: absolute;
+        bottom: 0px;
+      }
+    }
+
+    img{
+      width: 70%;
+    }
+  }
+
+  .crow-text {
+    margin-top: 70px !important;
+
+    h3 {
+      font-size: 24px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+}

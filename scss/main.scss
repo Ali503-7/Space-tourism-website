@@ -128,18 +128,60 @@ header {
 main .contaner {
   margin: 0 auto;
   max-width: 1050px;
-  padding: 0px 24px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
+
+}
+
+.main-con {
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 0px 25px;
+  
+
+  p {
+    color: white;
+    margin-bottom: 65px;
+  }
+
+  .numbering {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    opacity: 0.25;
+    padding-right: 20px;
+  }
 
 }
 
 
 
 @include breakPoint(mobile) {
+
+    .main-con p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+    
+        .numbering {
+          font-size: 16px !important;
+        }
+      }
+    
+      .contaner {
+        padding: 0px !important;
+      }
+    
+      .mid {
+        h2 {
+          font-size: 56px !important;
+        }
+      }
 
   header {
     .disk-ul {
@@ -282,3 +324,4 @@ header {
   padding: 0px;
   width: 0% !important;
 }
+

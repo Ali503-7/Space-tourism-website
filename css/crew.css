@@ -1,0 +1,127 @@
+body {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
+}
+
+.main-con .h5 {
+  padding: 0px 25px;
+  margin: 15px;
+}
+
+body main {
+  padding-bottom: max(0rem, 0vh);
+}
+
+.main-con {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+.main-con .crow-img {
+  align-self: flex-end;
+  margin-left: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.main-con .crow-img img {
+  max-width: 90%;
+}
+.main-con .crow {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+.main-con .crow .crow-text {
+  max-width: 700px;
+  margin-top: 150px;
+}
+.main-con .crow .crow-text p {
+  color: #D0D6F9;
+  line-height: 178%;
+  display: inline;
+}
+.main-con .crow .dots .dote {
+  width: 15px;
+  height: 15px;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.17;
+  display: block;
+  border-radius: 50%;
+}
+.main-con .crow .dots .dote[status=active] {
+  opacity: 1;
+}
+.main-con .crow .dots ul {
+  display: flex;
+  flex-direction: row;
+}
+.main-con .crow .dots ul li {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-image: url(../assets/crew/background-crew-tablet.jpg);
+  }
+  .crow {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+@media (max-width: 767px) {
+  body {
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+  .main-con .contaner {
+    flex-direction: column-reverse !important;
+  }
+  .crow {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    padding: 0px 24px;
+  }
+  .crow-img {
+    width: 100%;
+    position: relative;
+    margin: 0px;
+  }
+  .crow-img .beffor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .crow-img .beffor::before {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: rgba(208, 214, 249, 0.1882352941);
+    position: absolute;
+    bottom: 0px;
+  }
+  .crow-img img {
+    width: 70%;
+  }
+  .crow-text {
+    margin-top: 70px !important;
+  }
+  .crow-text h3 {
+    font-size: 24px;
+  }
+  .crow-text span {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=crew.css.map */

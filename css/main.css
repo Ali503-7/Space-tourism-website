@@ -121,17 +121,21 @@ h2 {
 h3 {
   font-size: 56px;
   font-family: "Bellefair", serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 h4 {
   font-size: 32px;
   font-family: "Bellefair", serif;
+  text-transform: uppercase;
 }
 
 .h5 {
   font-size: 28px;
   letter-spacing: 4.75px;
   font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
 }
 
 .Sub-h1 {
@@ -173,6 +177,19 @@ h4 {
   font-size: 16px;
   line-height: 19.2px;
   letter-spacing: 2.7px;
+}
+
+.crow-h {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }
 
 body {
@@ -278,14 +295,45 @@ header .contaner .ul-con::before {
 main .contaner {
   margin: 0 auto;
   max-width: 1050px;
-  padding: 0px 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
+.main-con {
+  margin: 0 auto;
+  max-width: 1150px;
+  padding: 0px 25px;
+}
+.main-con p {
+  color: white;
+  margin-bottom: 65px;
+}
+.main-con .numbering {
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 4.725px;
+  opacity: 0.25;
+  padding-right: 20px;
+}
+
 @media (max-width: 767px) {
+  .main-con p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+  }
+  .main-con p .numbering {
+    font-size: 16px !important;
+  }
+  .contaner {
+    padding: 0px !important;
+  }
+  .mid h2 {
+    font-size: 56px !important;
+  }
   header {
     padding: 24px;
   }
