@@ -36,6 +36,10 @@ main .contaner {
   transition: 0s !important;
   border-bottom: solid 3px white;
 }
+.contaner .planets .top ul li:hover {
+  transition: 0s !important;
+  border-bottom: solid 3px rgba(255, 255, 255, 0.432);
+}
 .contaner .planets .mid {
   position: relative;
 }

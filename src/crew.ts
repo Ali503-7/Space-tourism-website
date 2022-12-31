@@ -35,9 +35,9 @@ const crew = (_theCrew: string): void => {
 }) => {
         if (namee.name == _theCrew) {
           C_role.innerHTML = namee.role
-          crowname?.innerHTML = namee.name
-          text?.innerHTML = namee.bio
-          C_img?.setAttribute('src', namee.images.png)
+          crowname.innerHTML = namee.name
+          text.innerHTML = namee.bio
+          C_img.setAttribute('src', namee.images.png)
         }
       });
     })
