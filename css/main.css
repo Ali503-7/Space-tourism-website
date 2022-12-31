@@ -192,6 +192,14 @@ h4 {
   opacity: 0.5;
 }
 
+p {
+  color: #D0D6F9 !important;
+}
+
+:root {
+  --red: red;
+}
+
 body {
   background-size: cover;
   display: flex;

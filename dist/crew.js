@@ -27,9 +27,9 @@ const crew = (_theCrew) => {
         _opjects.forEach((namee) => {
             if (namee.name == _theCrew) {
                 C_role.innerHTML = namee.role;
-                crowname === null || crowname === void 0 ? void 0 : crowname.innerHTML = namee.name;
-                text === null || text === void 0 ? void 0 : text.innerHTML = namee.bio;
-                C_img === null || C_img === void 0 ? void 0 : C_img.setAttribute('src', namee.images.png);
+                crowname.innerHTML = namee.name;
+                text.innerHTML = namee.bio;
+                C_img.setAttribute('src', namee.images.png);
             }
         });
     });

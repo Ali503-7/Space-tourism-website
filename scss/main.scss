@@ -10,6 +10,10 @@
 // mixins
 @use "./helpers/mixin/mixins" as*;
 
+:root {
+  --red: red;
+}
+
 body {
   background-size: cover;
   
